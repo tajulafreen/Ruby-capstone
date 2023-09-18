@@ -13,12 +13,12 @@ class Item
   end
 
   def can_be_archived?
-     (Date.today.year - @published_date.year) >= 10
+    (Date.today.year - @published_date.year) >= 10
   end
 
   def move_to_archive
-    if can_be_archived?
-      @archived = true
-    end
+    return unless can_be_archived?
+
+    @archived = true
   end
 end
