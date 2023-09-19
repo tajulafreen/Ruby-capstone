@@ -13,7 +13,7 @@ def list_options
   puts '8. Add a game'
   puts '9. Add a music album'
   puts '10. End'
-  gets.chomp.to_i # Capture user input as an integer
+  gets.chomp.to_i 
 end
 
 def main
@@ -33,7 +33,7 @@ def main
     10 => app.method(:exit_app)
   }
 
-  response = nil # Initialize response
+  response = nil 
 
   while response != 10
     response = list_options
@@ -47,5 +47,5 @@ def main
   end
 end
 
-# Call the main method to start the program
+
 main
