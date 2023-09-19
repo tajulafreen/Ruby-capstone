@@ -1,34 +1,11 @@
-MENU_OPTIONS = {
-  1 => { label: 'List all books', method: nil },
-  2 => { label: 'List all movies', method: nil },
-  3 => { label: 'List all games', method: nil },
-  4 => { label: 'List all genre', method: nil },
-  5 => { label: 'List all authors', method: nil },
-  6 => { label: 'List all sources', method: nil },
-
-  7 => { label: 'create a book', method: nil },
-  8 => { label: 'create a movie', method: nil },
-  9 => { label: 'create a game', method: nil },
-  11 => { label: 'create a genre', method: nil },
-  12 => { label: 'create a author', method: nil },
-  13 => { label: 'create a source', method: nil },
-
-  0 => { label: 'Quit', method: nil }
-}.freeze
-
-
 class App
-  attr_reader :people, :books, :rentals
-
   def initialize
     @music_album = []
     @books = []
-    @movies = []
     @games = []
     @genres = []
     @labels = []
     @authors = []
-    @sources = []
 
     at_exit { save_all_objects }
   end
