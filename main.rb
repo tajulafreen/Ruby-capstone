@@ -13,32 +13,37 @@ def list_options
   puts '8. Add a game'
   puts '9. Add a music album'
   puts '10. End'
-  gets.chomp # Capture user input and return it
+  gets.chomp.to_i # Capture user input as an integer
 end
 
 def main
   app = App.new
   puts 'app created'
 
+  actions = {
+    1 => app.method(:list_all_books),
+    2 => app.method(:list_all_games),
+    3 => app.method(:list_all_music_albums),
+    4 => app.method(:list_all_genres),
+    5 => app.method(:list_all_authors),
+    6 => app.method(:list_all_labels),
+    7 => app.method(:add_a_book),
+    8 => app.method(:add_a_game),
+    9 => app.method(:add_a_music_album),
+    10 => app.method(:exit_app)
+  }
+
   response = nil # Initialize response
 
-  loop do
+  while response != 10
     response = list_options
-    case response
-    when 1 then app.list_all_books
-    when 2 then app.list_all_games
-    when 3 then app.list_all_music_albums
-    when 4 then app.list_all_genres
-    when 5 then app.list_all_authors
-    when 6 then app.list_all_labels
-    when 7 then app.add_a_book
-    when 8 then app.add_a_game
-    when 9 then app.add_a_music_album
-    when 10 then app.exit_app
+    action = actions[response]
+
+    if action
+      action.call
     else
       puts 'Invalid option. Please choose a valid option.'
     end
-    break if response == 10
   end
 end
 
