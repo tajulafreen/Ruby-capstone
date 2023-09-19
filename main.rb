@@ -38,7 +38,6 @@ def main
     else
       puts 'Invalid option. Please choose a valid option.'
     end
-
     break if response == 10
   end
 end
