@@ -13,14 +13,14 @@ def list_options
   puts '8. Add a game'
   puts '9. Add a music album'
   puts '10. End'
-  gets.chomp # Capture user input and return it
+  gets.chomp 
 end
 
 def main
   app = App.new
   puts 'app created'
 
-  response = nil # Initialize response
+  response = nil 
 
   loop do
     response = list_options
@@ -42,5 +42,4 @@ def main
   end
 end
 
-# Call the main method to start the program
 main
