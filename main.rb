@@ -13,34 +13,35 @@ def list_options
   puts '8. Add a game'
   puts '9. Add a music album'
   puts '10. End'
+  gets.chomp # Capture user input and return it
 end
 
 def main
   app = App.new
   puts 'app created'
 
-  while response != '10'
+  response = nil # Initialize response
+
+  loop do
     response = list_options
     case response
-    when '1'
-      app.list_all_books
-    when '2'
-      app.list_all_games
-    when '3'
-      app.list_all_music_albums
-    when '4'
-      app.list_all_genres
-    when '5'
-      app.list_all_authors
-    when '6'
-      app.list_all_labels
-    when '7'
-      app.add_a_book
-    when '8'
-      app.add_a_game
-    when '9'
-      app.add_a_music_album
-    when '10' then app.exit_app
+    when 1 then app.list_all_books
+    when 2 then app.list_all_games
+    when 3 then app.list_all_music_albums
+    when 4 then app.list_all_genres
+    when 5 then app.list_all_authors
+    when 6 then app.list_all_labels
+    when 7 then app.add_a_book
+    when 8 then app.add_a_game
+    when 9 then app.add_a_music_album
+    when 10 then app.exit_app
+    else
+      puts 'Invalid option. Please choose a valid option.'
     end
+
+    break if response == 10
   end
 end
+
+# Call the main method to start the program
+main
