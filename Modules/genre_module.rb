@@ -1,4 +1,4 @@
-require_relative '../classes/music/genre.rb'
+require_relative '../classes/music/genre'
 
 module GenreModule
   def list_genres
