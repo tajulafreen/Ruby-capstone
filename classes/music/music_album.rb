@@ -1,4 +1,4 @@
-require '../item.rb'
+require '../item'
 
 require 'date'
 
@@ -10,7 +10,6 @@ class MusicAlbum < Item
     @id = Random.rand(1...1000)
     @on_spotify = on_spotify
   end
-  
 
   def can_be_archived?
     super == true && @on_spotify == true
