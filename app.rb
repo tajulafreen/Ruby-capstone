@@ -3,11 +3,14 @@ require_relative 'classes/music/music_album'
 require_relative 'Modules/genre_module'
 require_relative 'Modules/book_module'
 require_relative 'classes/book/book'
+require_relative 'Modules/label_module'
 
 class App
    include MusicModule
    include GenreModule
    include BookModule
+   include LabelModule
+   
   def initialize
     @songs = []
     @books = []
