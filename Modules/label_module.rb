@@ -5,8 +5,8 @@ module LabelModule
     if @labels.empty?
       puts 'There are no labels to show'
     else
-      @labels.each_with_index do |label, i|
-        puts "List of labels:"
+      @labels.each_with_index do |label, _i|
+        puts 'List of labels:'
         puts "Title: #{label.title}, color: #{label.color}"
       end
     end

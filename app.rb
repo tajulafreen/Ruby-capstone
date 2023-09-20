@@ -6,11 +6,11 @@ require_relative 'classes/book/book'
 require_relative 'Modules/label_module'
 
 class App
-   include MusicModule
-   include GenreModule
-   include BookModule
-   include LabelModule
-   
+  include MusicModule
+  include GenreModule
+  include BookModule
+  include LabelModule
+
   def initialize
     @songs = []
     @books = []
@@ -24,7 +24,6 @@ class App
     MusicModule.add_music_album(self)
   end
 
-  
   def add_book(app)
     puts 'Please enter the Publisher:'
     publisher = gets.chomp
