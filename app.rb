@@ -24,11 +24,14 @@ class App
 
  def load_data
 @books = PreserveBook.load_books
+@labels = PreserveLabel.load_labels
  end
 
 
   def save_data
      PreserveBook.save_books(@books)
+     PreserveLabel.save_labels(@labels)
+  
   end
 
   def create_musicalbum
