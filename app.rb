@@ -31,7 +31,13 @@ class App
     cover_state = gets.chomp
     puts 'Please enter the published date of the book:'
     publish_date = gets.chomp
+    puts 'Please enter the title of the book: '
+    title = gets.chomp
+    puts 'Please enter the color of the book: '
+    color = gets.chomp
     app.created_book(publisher, cover_state, publish_date)
+    new_label = Label.new(title,color)
+    @labels << new_label 
   end
 end
 App.new
