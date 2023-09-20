@@ -16,7 +16,7 @@ def main
       7 => -> { app.add_book },
       8 => -> { app.add_a_music_album },
       9 => -> { app.add_game },
-      10 => -> { app.exit_app }
+      10 => -> { exit }
     }
     case option
     when 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
