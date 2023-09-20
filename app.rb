@@ -29,7 +29,7 @@ class App
     cover_state = gets.chomp
     puts 'Please enter the published date of the book:'
     publish_date = gets.chomp
-    app.create_book(publisher, cover_state, publish_date)
+    app.created_book(publisher, cover_state, publish_date)
   end
 end
 App.new
