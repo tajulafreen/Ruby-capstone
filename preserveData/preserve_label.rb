@@ -1,7 +1,7 @@
 require 'json'
 
 class PreserveLabel
-  DATA_FILE = 'labels.json'
+  DATA_FILE = 'labels.json'.freeze
 
   def self.load_labels
     if File.exist?(DATA_FILE)
@@ -20,8 +20,6 @@ class PreserveLabel
         'color' => label.color
       }
     end
-    File.open(DATA_FILE, 'w') do |file|
-      file.write(JSON.dump(label_data))
-    end
+    File.write(DATA_FILE, JSON.dump(label_data))
   end
 end

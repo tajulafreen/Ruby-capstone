@@ -1,7 +1,7 @@
 require 'json'
 
 class PreserveBook
-  DATA_FILE = 'books.json'
+  DATA_FILE = 'books.json'.freeze
 
   def self.load_books
     if File.exist?(DATA_FILE)
@@ -21,8 +21,6 @@ class PreserveBook
         'publish_date' => book.publish_date.to_s
       }
     end
-    File.open(DATA_FILE, 'w') do |file|
-      file.write(JSON.dump(book_data))
-    end
+    File.write(DATA_FILE, JSON.dump(book_data))
   end
 end

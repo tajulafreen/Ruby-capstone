@@ -18,7 +18,7 @@ def main
       7 => -> { app.add_book(app) },
       8 => -> { app.add_a_music_album },
       9 => -> { app.add_game },
-      10 => -> {
+      10 => lambda {
         app.save_data
         exit
       }

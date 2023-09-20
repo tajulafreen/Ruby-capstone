@@ -1,4 +1,4 @@
- require_relative '../../preserveData/PreserveLabel'
+require_relative '../../preserveData/preserve_label'
 
 class Label
   attr_accessor :id, :title, :color, :items
