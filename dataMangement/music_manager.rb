@@ -1,5 +1,5 @@
 require 'json'
-require '../classes/music/music_album'
+require_relative 'classes/music/music_album'
 
 class MusicManager
   DATA_FOLDER = 'JSON/'.freeze
