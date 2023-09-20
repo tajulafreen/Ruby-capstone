@@ -5,6 +5,14 @@ describe Book do
     @label = Label.new('title', 'color')
   end
 
+  context 'add_item method' do
+    it 'should return an array of item' do
+      item = Item.new('2023/08/09', archived: true)
+      @label.add_item(item)
+      expect(@label.items).to eq([item])
+    end
+  end
+
   context 'test the inputs' do
     it 'should return correct value of title' do
       @label = Label.new('title', 'color')
