@@ -4,7 +4,7 @@ require_relative 'Modules/genre_module'
 
 class App
   include MusicModule
-   include GenreModule
+  include GenreModule
   def initialize
     @songs = []
     @books = []
