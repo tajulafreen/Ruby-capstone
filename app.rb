@@ -4,8 +4,12 @@ require_relative 'Modules/genre_module'
 require_relative 'Modules/book_module'
 require_relative 'classes/book/book'
 require_relative 'Modules/label_module'
+require_relative 'preserveData/preserve_music'
+require_relative 'preserveData/preserve_genre'
 
 class App
+  attr_accessor :books, :games, :music, :genres, :authors, :labels
+
   include MusicModule
   include GenreModule
   include BookModule
@@ -18,13 +22,16 @@ class App
     @genres = []
     @labels = []
     @authors = []
-
+    @music_album_data = MusicManager.new
+    @genre_data = GenreManager.new
     load_data
   end
 
   def load_data
     @books = PreserveBook.load_books
     @labels = PreserveLabel.load_labels
+    @songs = @music_album_data.load_music_album
+    @genres = @genre_data.load_genre
   end
 
   def save_data
