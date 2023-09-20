@@ -2,6 +2,8 @@ require './app'
 
 def main
   app = App.new
+  app.load_data
+
   loop do
     prompter
     option = gets.chomp.to_i
@@ -15,7 +17,10 @@ def main
       7 => -> { app.add_book(app) },
       8 => -> { app.add_a_music_album },
       9 => -> { app.add_game },
-      10 => -> { exit }
+      10 => lambda {
+        app.save_data
+        exit
+      }
     }
     case option
     when 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
