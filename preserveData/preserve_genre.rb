@@ -1,5 +1,5 @@
 require 'json'
-require_relative '../classes/music/genre.rb'
+require_relative '../classes/music/genre'
 
 class GenreManager
   DATA_FOLDER = 'JSON/'.freeze
