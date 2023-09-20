@@ -1,6 +1,5 @@
 require './app'
 
-
 def main
   app = App.new
   loop do
@@ -13,7 +12,7 @@ def main
       4 => -> { app.list_all_genres },
       5 => -> { app.list_all_labels },
       6 => -> { app.list_all_authors },
-      7 => -> { app.add_book },
+      7 => -> { app.add_book(app) },
       8 => -> { app.add_a_music_album },
       9 => -> { app.add_game },
       10 => -> { exit }
@@ -29,9 +28,9 @@ def prompter
   puts ' '
   puts 'Welcome to Our App!'
   puts 'Please choose an option by entering a number:'
-  puts '1 - list all books'
-  puts '2 - list all music album'
-  puts '3 - list all games'
+  puts '1 - List all books'
+  puts '2 - List all music album'
+  puts '3 - List all games'
   puts '4 - List all genres'
   puts '5 - List all labels'
   puts '6 - List all authors'
