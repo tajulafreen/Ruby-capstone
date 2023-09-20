@@ -36,8 +36,8 @@ class App
     puts 'Please enter the color of the book: '
     color = gets.chomp
     app.created_book(publisher, cover_state, publish_date)
-    new_label = Label.new(title,color)
-    @labels << new_label 
+    new_label = Label.new(title, color)
+    @labels << new_label
   end
 end
 App.new
