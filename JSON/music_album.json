@@ -1,0 +1,39 @@
+{
+    "MusicAlbums": [
+      {
+        "publish_date": "2021-05-18",
+        "on_spotify": true,
+        "id": 458
+      },
+      {
+        "publish_date": "2019-05-18",
+        "on_spotify": false,
+        "id": 114
+      },
+      {
+        "publish_date": "1995-05-18",
+        "on_spotify": true,
+        "id": 686
+      },
+      {
+        "publish_date": "2023-05-03",
+        "on_spotify": true,
+        "id": 407
+      },
+      {
+        "publish_date": "2023-05-03",
+        "on_spotify": true,
+        "id": 265
+      },
+      {
+        "publish_date": "2023-12-11",
+        "on_spotify": true,
+        "id": 330
+      },
+      {
+        "publish_date": "2012-08-09",
+        "on_spotify": true,
+        "id": 684
+      }
+    ]
+  }
