@@ -6,7 +6,7 @@ module MusicModule
     @songs << song
   end
 
-  def list_musicalbums
+  def list_all_music_albums
     if @songs.empty?
       puts 'There are no music album'
     else
