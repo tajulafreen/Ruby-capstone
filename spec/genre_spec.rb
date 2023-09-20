@@ -1,5 +1,5 @@
-require '../classes/music/genre'
-require '../classes/item'
+require_relative '../classes/music/genre'
+require_relative '../classes/item'
 
 describe Genre do
   before :each do

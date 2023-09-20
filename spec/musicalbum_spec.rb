@@ -1,4 +1,4 @@
-require '../classes/music/music_album'
+require_relative '../classes/music/music_album'
 
 describe MusicAlbum do
   describe '#can_be_archived?' do
