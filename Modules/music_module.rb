@@ -1,7 +1,7 @@
-require_relative '../classes/music/music_album.rb'
+require_relative '../classes/music/music_album'
 
 module MusicModule
-  def create_musicalbum(publish_date, on_spotify)
+  def add_a_music_album(publish_date, on_spotify)
     song = MusicAlbum.new(publish_date, on_spotify)
     @songs << song
   end
