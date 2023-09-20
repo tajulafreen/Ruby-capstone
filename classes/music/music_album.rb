@@ -1,6 +1,5 @@
-require_relative '../item'
-
 require 'date'
+require_relative '../item'
 
 class MusicAlbum < Item
   attr_reader :id, :on_spotify
