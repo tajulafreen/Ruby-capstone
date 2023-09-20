@@ -1,12 +1,13 @@
-require_relative 'item'
+require_relative '../item'
 
 class Book < Item
-  attr_accessor :publisher, :cover_state
+  attr_accessor :publisher, :cover_state, :publish_date
 
   def initialize(publisher, cover_state)
-    super()
+    super(publish_date)
     @publisher = publisher
     @cover_state = cover_state
+    @publish_date = publish_date
   end
 
   def can_be_archived?
