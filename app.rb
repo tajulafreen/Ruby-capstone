@@ -7,6 +7,7 @@ require_relative 'Modules/label_module'
 require_relative 'preserveData/preserve_music'
 require_relative 'preserveData/preserve_genre'
 require_relative 'Modules/game_module'
+require_relative 'Modules/author_module'
 
 class App
   attr_accessor :books, :games, :music, :genres, :authors, :labels
@@ -16,6 +17,7 @@ class App
   include BookModule
   include LabelModule
   include GameModule
+  include AuthorModule
 
   def initialize
     @songs = []
@@ -34,6 +36,7 @@ class App
     @songs = @music_album_data.load_music_album
     @genres = PreserveGenre.load_genres
     @games = load_games
+    @authors=load_authors
   end
 
   def save_data
@@ -43,6 +46,7 @@ class App
     music_manager = MusicManager.new
     music_manager.save_music_album(@songs)
     save_games
+    save_authors
   end
 
   def create_musicalbum

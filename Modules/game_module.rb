@@ -38,6 +38,7 @@ module GameModule
     print("LastName: ")
     author_last_name= gets.chomp
     author = Author.new(author_first_name,author_last_name)
+    @authors << author
     puts 'Game added successfully with author'
   end
 
