@@ -33,11 +33,11 @@ module GameModule
     @games << game
 
     puts 'Author First and last name:'
-    print "FirstName: "
-    author_first_name= gets.chomp
-    print("LastName: ")
-    author_last_name= gets.chomp
-    author = Author.new(author_first_name,author_last_name)
+    print 'FirstName: '
+    author_first_name = gets.chomp
+    print('LastName: ')
+    author_last_name = gets.chomp
+    author = Author.new(author_first_name, author_last_name)
     @authors << author
     puts 'Game added successfully with author'
   end

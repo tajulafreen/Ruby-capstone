@@ -36,7 +36,7 @@ class App
     @songs = @music_album_data.load_music_album
     @genres = PreserveGenre.load_genres
     @games = load_games
-    @authors=load_authors
+    @authors = load_authors
   end
 
   def save_data
