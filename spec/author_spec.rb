@@ -1,6 +1,5 @@
 require_relative '../classes/games-and-authors/author'
 
-
 describe 'Testing Author classes' do
   before(:context) do
     @author = Author.new('Osman', 'Wako')
