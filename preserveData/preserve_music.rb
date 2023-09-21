@@ -2,12 +2,12 @@ require 'json'
 require_relative '../classes/music/music_album'
 
 class MusicManager
-  DATA_FOLDER = 'JSON/'.freeze
+  DATA_FOLDER = 'music_album.json'.freeze
 
   def load_music_album
-    return [] unless File.exist?("#{DATA_FOLDER}music_album.json")
+    return [] unless File.exist?(DATA_FOLDER)
 
-    data = JSON.parse(File.read("#{DATA_FOLDER}music_album.json"))
+    data = JSON.parse(File.read(DATA_FOLDER))
     music_albums = []
     data['MusicAlbums'].map do |music_album_data|
       music_albums << MusicAlbum.new(music_album_data['publish_date'], music_album_data['on_spotify'])
@@ -16,7 +16,7 @@ class MusicManager
   end
 
   def save_music_album(songs)
-    File.open("#{DATA_FOLDER}music_album.json", 'w') do |file|
+    File.open("#{DATA_FOLDER}", 'w') do |file|
       data = {
         'MusicAlbums' => songs.map do |song|
                            {

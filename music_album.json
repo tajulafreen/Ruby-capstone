@@ -1,0 +1,14 @@
+{
+  "MusicAlbums": [
+    {
+      "publish_date": "2023",
+      "on_spotify": "yes",
+      "id": 669
+    },
+    {
+      "publish_date": "2021",
+      "on_spotify": "no",
+      "id": 603
+    }
+  ]
+}

@@ -1,10 +1,10 @@
 require_relative '../classes/music/music_album'
 
 module MusicModule
-  def add_a_music_album(publish_date, on_spotify)
+  def added_a_music_album(publish_date, on_spotify)
     song = MusicAlbum.new(publish_date, on_spotify)
     @songs << song
-    save_music_album_to_file(@songs)
+    puts "Music album added successfully"
   end
 
   def list_all_music_albums
