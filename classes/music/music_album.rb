@@ -1,12 +1,10 @@
 require_relative '../item'
-require 'date' # Ensure the Date module is required
+require 'date'
 
 class MusicAlbum < Item
   attr_reader :id, :on_spotify
 
   def initialize(publish_date, on_spotify)
-    # Convert the publish_date to a Date object
-    publish_date = Date.parse(publish_date)
     super(publish_date)
     @id = Random.rand(1...1000)
     @on_spotify = on_spotify
