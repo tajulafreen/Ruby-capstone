@@ -16,7 +16,7 @@ class MusicManager
   end
 
   def save_music_album(songs)
-    File.open("#{DATA_FOLDER}", 'w') do |file|
+    File.open(DATA_FOLDER.to_s, 'w') do |file|
       data = {
         'MusicAlbums' => songs.map do |song|
                            {
