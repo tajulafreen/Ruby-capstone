@@ -16,7 +16,7 @@ class PreserveGenre
   def self.save_genres(genres)
     genre_data = genres.map do |genre|
       {
-        'name' => genre.name,
+        'name' => genre.name
       }
     end
     File.write(DATA_FILE, JSON.dump(genre_data))
