@@ -6,7 +6,6 @@ require_relative 'classes/book/book'
 require_relative 'Modules/label_module'
 require_relative 'preserveData/preserve_music'
 require_relative 'preserveData/preserve_genre'
-require_relative 'preserveData/preserve_music'
 
 class App
   attr_accessor :books, :games, :music, :genres, :authors, :labels
@@ -58,7 +57,7 @@ class App
     @labels << new_label
   end
 
-   def add_a_music_album()
+  def add_a_music_album()
     puts 'Is it on spotify?'
     on_spotify = gets.chomp
     puts 'Publish date: '

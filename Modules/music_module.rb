@@ -4,7 +4,7 @@ module MusicModule
   def added_a_music_album(publish_date, on_spotify)
     song = MusicAlbum.new(publish_date, on_spotify)
     @songs << song
-    puts "Music album added successfully"
+    puts 'Music album added successfully'
   end
 
   def list_all_music_albums
