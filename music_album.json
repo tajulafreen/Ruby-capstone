@@ -3,12 +3,37 @@
     {
       "publish_date": "2023",
       "on_spotify": "yes",
-      "id": 669
+      "id": 932
     },
     {
       "publish_date": "2021",
       "on_spotify": "no",
-      "id": 603
+      "id": 878
+    },
+    {
+      "publish_date": "2023",
+      "on_spotify": "yes",
+      "id": 33
+    },
+    {
+      "publish_date": "2017",
+      "on_spotify": "yes",
+      "id": 113
+    },
+    {
+      "publish_date": "2022",
+      "on_spotify": "yes",
+      "id": 817
+    },
+    {
+      "publish_date": "2019",
+      "on_spotify": "no",
+      "id": 957
+    },
+    {
+      "publish_date": "2021-01-01",
+      "on_spotify": "yes",
+      "id": 873
     }
   ]
 }

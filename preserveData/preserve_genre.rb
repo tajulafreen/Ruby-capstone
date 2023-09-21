@@ -1,15 +1,24 @@
 require 'json'
-require_relative '../classes/music/genre'
 
-class GenreManager
-  DATA_FOLDER = 'JSON/'.freeze
+class PreserveGenre
+  DATA_FILE = 'genre.json'.freeze
 
-  def load_genre
-    return [] unless File.exist?("#{DATA_FOLDER}genre.json")
+  def self.load_genres
+    if File.exist?(DATA_FILE)
+      JSON.parse(File.read(DATA_FILE)).map do |genre_data|
+        Genre.new(genre_data['name'])
+      end
+    else
+      []
+    end
+  end
 
-    data = JSON.parse(File.read("#{DATA_FOLDER}genre.json"))
-    genres = []
-    data['Genres'].map { |genre_data| genres << Genre.new(genre_data['name']) }
-    genres
+  def self.save_genres(genres)
+    genre_data = genres.map do |genre|
+      {
+        'name' => genre.name,
+      }
+    end
+    File.write(DATA_FILE, JSON.dump(genre_data))
   end
 end
