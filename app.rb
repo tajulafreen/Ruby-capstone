@@ -17,7 +17,6 @@ class App
   include LabelModule
   include GameModule
 
-
   def initialize
     @songs = []
     @books = []
