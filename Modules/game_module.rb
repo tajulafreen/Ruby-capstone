@@ -1,4 +1,5 @@
 require_relative '../classes/games-and-authors/games'
+require_relative '../classes/games-and-authors/author'
 require 'json'
 
 module GameModule
@@ -14,23 +15,31 @@ module GameModule
   end
 
   def add_game
-    puts 'Is the game multiplayer? (yes/no)'
+    print 'Is the game multiplayer? (yes/no): '
     multiplayer_input = gets.chomp.downcase
     multiplayer = multiplayer_input == 'yes'
 
-    puts 'Enter the last played date (YYYY-MM-DD):'
+    print 'Enter the last played date (YYYY-MM-DD):'
     date_input = gets.chomp
 
     begin
       last_played_at = Date.parse(date_input).to_time
     rescue ArgumentError
       puts 'Invalid date format. Please use YYYY-MM-DD.'
-      return
+      add_game
     end
 
     game = Game.new(multiplayer, last_played_at)
     @games << game
-    puts 'Game succesfully created'
+
+    puts 'Author First and last name:'
+    print 'FirstName: '
+    author_first_name = gets.chomp
+    print('LastName: ')
+    author_last_name = gets.chomp
+    author = Author.new(author_first_name, author_last_name)
+    @authors << author
+    puts 'Game added successfully with author'
   end
 
   def load_games
