@@ -27,7 +27,7 @@ CREATE TABLE books (
   publish_date DATE,
   cover_state VARCHAR(255),
   archived BOOLEAN,
-  FOREIGN KEY (item_id) REFERENCES items(id)
+    FOREIGN KEY (item_id) REFERENCES Item(id)
 );
 
 CREATE INDEX idx_books_item_id ON books(item_id);
@@ -37,7 +37,7 @@ CREATE TABLE labels (
   item_id INTEGER,
   title VARCHAR(255),
   color VARCHAR(100),
-  FOREIGN KEY (item_id) REFERENCES items(id)
+  FOREIGN KEY (item_id) REFERENCES Item(id)
 );
 
 CREATE INDEX idx_labels_item_id ON labels(item_id);
@@ -48,8 +48,11 @@ CREATE TABLE
     id INT GENERATED ALWAYS AS IDENTITY,
     first_name VARCHAR(30),
     last_name VARCHAR(30),
-    PRIMARY KEY (id)
+    FOREIGN KEY (item_id) REFERENCES Item(id)
   );
+
+CREATE INDEX idx_authors_item_id ON authors(item_id);
+
 
 -- Create Game Table
 CREATE TABLE
@@ -60,5 +63,7 @@ CREATE TABLE
     last_played_at DATE,
     author_id INT,
     PRIMARY KEY (id),
-    FOREIGN KEY (author_id) REFERENCES authors(id)
+    FOREIGN KEY (item_id) REFERENCES Item(id)
   );
+
+  CREATE INDEX idx_games_item_id ON games(item_id);
