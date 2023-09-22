@@ -2,7 +2,7 @@ require 'json'
 require_relative '../classes/music/music_album'
 
 class MusicManager
-  DATA_FOLDER = 'music_album.json'.freeze
+  DATA_FOLDER = 'music.json'.freeze
 
   def load_music_album
     return [] unless File.exist?(DATA_FOLDER)
@@ -21,8 +21,7 @@ class MusicManager
         'MusicAlbums' => songs.map do |song|
                            {
                              'publish_date' => song.publish_date,
-                             'on_spotify' => song.on_spotify,
-                             'id' => song.id
+                             'on_spotify' => song.on_spotify
                            }
                          end
       }

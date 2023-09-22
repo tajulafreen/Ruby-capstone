@@ -29,7 +29,7 @@
 
 # 📖 Catalog of My Things <a name="about-project"></a>
 
-**Catalog of My Things** is an application with a library management system; users can interact with and manage a diverse collection of items, including books, music albums, and games, and associate them with tags, genres, and authors. The system also applies rules for archiving items based on criteria specific to each item type.
+**Catalog of My Things** is an application with a library management system; users can interact with and manage a diverse collection of items, including books, music albums, and games, and associate them with labels, genres, and authors. The system also applies rules for archiving items based on criteria specific to each item type.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -51,13 +51,13 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LIVE DEMO
+<!--LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://stock-wise.vercel.app/)
+- [Live Demo Link](https://drive.google.com/file/d/1XbuGeUOACbXScL0wWDzxogPq66pkYbw4/view?usp=sharing)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
