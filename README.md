@@ -13,7 +13,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-    - [Live Demo](#live-demo-)
+    - [Video Presentation](#live-demo-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -53,9 +53,9 @@
 
 <!--LIVE DEMO -->
 
-## 🚀 Live Demo <a name="live-demo"></a>
+## 🚀 Video Presentation <a name="live-demo"></a>
 
-- [Live Demo Link](https://drive.google.com/file/d/1XbuGeUOACbXScL0wWDzxogPq66pkYbw4/view?usp=sharing)
+- [Video Presentation](https://drive.google.com/file/d/1XbuGeUOACbXScL0wWDzxogPq66pkYbw4/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
