@@ -13,7 +13,6 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-    - [Video Presentation](#live-demo-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -51,13 +50,6 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!--LIVE DEMO -->
-
-## 🚀 Video Presentation <a name="live-demo"></a>
-
-- [Video Presentation](https://drive.google.com/file/d/1XbuGeUOACbXScL0wWDzxogPq66pkYbw4/view?usp=sharing)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
